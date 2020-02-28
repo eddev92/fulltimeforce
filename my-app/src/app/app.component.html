@@ -1,4 +1,26 @@
 <div>
+<button (click)="showFormRegister()">AGREGAR USUARIO</button>
+<br/>
+<br/>
+<br/>
+
+<form *ngIf="showForm" class="form-register">
+  <label>ID:</label>
+  <input type="number" name="id" class="form-control" [(ngModel)]="newUser.id" />  
+  <input type="number" class="form-control" name="enabled" [(ngModel)]="newUser.enabled" />
+  <input type="number" class="form-control" name="activated" [(ngModel)]="newUser.activated" />
+  <input type="text" class="form-control" name="name" [(ngModel)]="newUser.name" />
+  <input type="text" class="form-control" name="userName" [(ngModel)]="newUser.userName" />
+  <input type="text" class="form-control" name="email" [(ngModel)]="newUser.email" />
+  <input type="text" class="form-control" name="userGroup" [(ngModel)]="newUser.userGroup" />
+  <input type="text" class="form-control" name="lastVisit" [(ngModel)]="newUser.lastVisit" />
+  <button (click)="registerUser()">Registrar usuario</button>
+</form>
+
+<br/>
+<br/>
+<br/>
+
   <table>
     <thead>
       <tr>

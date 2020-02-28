@@ -10,4 +10,8 @@ export class Appservice {
     return this.httpClient.get("http://localhost:8080/users");
   }
 
+  public registerUser(body) {
+    return this.httpClient.post("http://localhost:8080/user", body)
+  }
+
 }
