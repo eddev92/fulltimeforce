@@ -14,27 +14,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1</td>
-        <td>2</td>
-        <td>Edward</td>
-        <td>eddev92</td>
-        <td>edsadasd@dsadsad.com</td>
-        <td>Registered</td>
-        <td>28-02-2020 16:06</td>
-        <td>Registered</td>
-        <td>ID</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>1</td>
-        <td>Edward</td>
-        <td>eddev92</td>
-        <td>edsadasd@dsadsad.com</td>
-        <td>Registered</td>
-        <td>28-02-2020 16:06</td>
-        <td>Registered</td>
-        <td>ID</td>
+      <tr *ngFor="let item of listUsers;let i=index">
+        <td>{{item.enabled}}</td>
+        <td>{{item.activated}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.username}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.usergroup}}</td>
+        <td>{{item.lastvisit}}</td>
+        <td>{{item.registered}}</td>
+        <td>{{item.id}}</td>
       </tr>
     </tbody>
   </table>
