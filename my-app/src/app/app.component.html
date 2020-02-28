@@ -5,15 +5,20 @@
 <br/>
 
 <form *ngIf="showForm" class="form-register">
-  <label>ID:</label>
+  <label>ID:</label><br/>
   <input type="number" name="id" class="form-control" [(ngModel)]="newUser.id" />  
+  <label>Enabled:</label>
   <input type="number" class="form-control" name="enabled" [(ngModel)]="newUser.enabled" />
+  <label>Activated:</label>
   <input type="number" class="form-control" name="activated" [(ngModel)]="newUser.activated" />
+  <label>Name:</label>
   <input type="text" class="form-control" name="name" [(ngModel)]="newUser.name" />
+  <label>UserName:</label>
   <input type="text" class="form-control" name="userName" [(ngModel)]="newUser.userName" />
+  <label>Email:</label>
   <input type="text" class="form-control" name="email" [(ngModel)]="newUser.email" />
+  <label>UserGroup:</label>
   <input type="text" class="form-control" name="userGroup" [(ngModel)]="newUser.userGroup" />
-  <input type="text" class="form-control" name="lastVisit" [(ngModel)]="newUser.lastVisit" />
   <button (click)="registerUser()">Registrar usuario</button>
 </form>
 

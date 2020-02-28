@@ -29,9 +29,7 @@ export class AppComponent implements OnInit {
 
   loadUsers() {
     this.appservice.getUsers().subscribe((res: any) => {
-      console.log(res);
       this.listUsers = res.data;
-      console.log(this.listUsers);
     });
   }
 
@@ -43,9 +41,9 @@ export class AppComponent implements OnInit {
     if (this.newUser) {
       const dateNow = new Date();
       this.newUser.registered = `${new Date().getDate()}-${new Date().getMonth()}-${new Date().getFullYear()} / ${new Date().getHours()} hrs`;
+      this.newUser.lastVisit = `${new Date().getDate()}-${new Date().getMonth()}-${new Date().getFullYear()} / ${new Date().getHours()} hrs`;
       console.log(this.newUser)
       this.appservice.registerUser(this.newUser).subscribe((response: any) => {
-        console.log(response);
         this.showForm = false;
         this.loadUsers();
       }, (error: any) => {
